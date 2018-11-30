@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/css/style.css' />
+  <link type="text/css" rel="stylesheet" href="/css/lightGallery.css" />
+</head>
+
+<body>
+  <h1>{{title}}</h1>
+  <p>Welcome to {{title}}</p>
+  <div id="thumbnials">
+    <a href="/img/cpt/1.jpg">
+      <img src="/img/cpt/thumb-1.jpg" />
+    </a>
+    <a href="/img/cpt/2.jpg">
+      <img src="/img/cpt/thumb-2.jpg" />
+    </a>
+    <a href="/img/cpt/3.jpg">
+      <img src="/img/cpt/3.jpg" />
+    </a>
+    <a href="/img/cpt/4.jpg">
+      <img src="/img/cpt/thumb-4.jpg" />
+    </a>
+    <a href="/img/cpt/13.jpg">
+      <img src="/img/cpt/thumb-13.jpg" />
+    </a>
+
+  </div>
+  <!-- jQuery version must be >= 1.8.0; -->
+  <script src="/js/jquery-3.3.1.min.js"></script>
+  <script src="/js/lightgallery-all.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+          $("#thumbnials").lightGallery({
+            thumbnail: true,
+            animateThumb: true,
+            showThumbByDefault: true
+          });
+        });
+  </script>
+</body>
+</html>
