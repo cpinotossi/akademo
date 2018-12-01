@@ -2,84 +2,83 @@
 <html>
 <head>
   <title>{{title}}</title>
-  <link rel='stylesheet' href='/css/style.css' />
+  <link type="text/css" rel="stylesheet" href="/css/style.css" />
   <link type="text/css" rel="stylesheet" href="/css/lightgallery.min.css" />
 </head>
 
 <body>
   <h1>{{title}}</h1>
-  <p>Welcome to {{title}}</p>
+  <p>Gallery</p>
   <div id="thumbnials">
     <a href="/img/cpt/1.jpg">
-      <img src="/img/cpt/1.jpg?impolicy=thumbnails" />
+      <img src="/img/cpt/1.jpg?impolicy=thumbnails2" />
     </a>
     <a href="/img/cpt/2.jpg">
-      <img src="/img/cpt/2.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/2.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/3.jpg">
-      <img src="/img/cpt/3.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/3.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/4.jpg">
-      <img src="/img/cpt/4.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/4.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/5.jpg">
-      <img src="/img/cpt/5.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/5.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/6.jpg">
-      <img src="/img/cpt/6.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/6.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/7.jpg">
-      <img src="/img/cpt/7.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/7.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/8.jpg">
-      <img src="/img/cpt/8.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/8.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/9.jpg">
-      <img src="/img/cpt/9.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/9.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/10.jpg">
-      <img src="/img/cpt/10.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/10.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/11.jpg">
-      <img src="/img/cpt/11.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/11.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/12.jpg">
-      <img src="/img/cpt/12.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/12.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/13.jpg">
-      <img src="/img/cpt/13.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/13.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/14.jpg">
-      <img src="/img/cpt/14.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/14.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/15.jpg">
-      <img src="/img/cpt/15.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/15.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/16.jpg">
-      <img src="/img/cpt/16.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/16.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/17.jpg">
-      <img src="/img/cpt/17.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/17.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/18.jpg">
-      <img src="/img/cpt/18.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/18.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/19.jpg">
-      <img src="/img/cpt/19.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/19.jpg?impolicy=thumbnails2"/>
     </a>
     <a href="/img/cpt/20.jpg">
-      <img src="/img/cpt/20.jpg?impolicy=thumbnails"/>
+      <img src="/img/cpt/20.jpg?impolicy=thumbnails2"/>
     </a>
   </div>
   <!-- jQuery version must be >= 1.8.0; -->
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/lightgallery-all.min.js"></script>
+  <script src="/js/lg-thumbnail.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
           $("#thumbnials").lightGallery({
-            thumbnail: true,
-            animateThumb: true,
-            showThumbByDefault: true
+            thumbnail: true
           });
         });
   </script>
