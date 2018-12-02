@@ -1,0 +1,121 @@
+openapi: '3.0.0'
+info:
+  title: api.hebe.io
+  description: Manage Images in the Cloud
+  version: "1.0.0"
+
+servers:
+  # the domain of the service
+  - url: https://api.hebe.io
+    description: Production Server
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+paths:
+  /img/{userid}/{filename}:
+    put:
+      summary: upload file
+      security:
+       - ApiKeyAuth: []
+      description: upload file
+      tags:
+        - modify
+      parameters:
+        - in: path
+          name: userid
+          description: user id.
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: filename
+          description: name of the file which will be uploaded.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: the file has been uploaded successfully.
+          content:
+            text/plain:
+              schema:
+                type: string
+    get:
+      summary: download file
+      description: download file
+      tags:
+        - view
+      parameters:
+        - in: path
+          name: userid
+          description: user id.
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: filename
+          description: name of the file which will be downloaded.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Return file.
+          content:
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
+    delete:
+      summary: delete file
+      security:
+       - ApiKeyAuth: []
+      description: delete file
+      tags:
+        - modify
+      parameters:
+        - in: path
+          name: userid
+          description: user id.
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: filename
+          description: name of the file which will be deleted.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The File has been deleted successfully.
+          content:
+            text/plain:
+              schema:
+                type: string
+  /img/{userid}:
+    get:
+      summary: list files
+      security:
+       - ApiKeyAuth: []
+      description: list files
+      tags:
+        - view
+      parameters:
+        - in: path
+          name: userid
+          description: user id.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: list files successfully.
+          content:
+            text/plain:
+              schema:
+                type: string
