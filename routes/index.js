@@ -4,7 +4,7 @@ var request = require('request');
 var parser = require('xml2json');
 
 var userName = "Christian";
-var policyImageManager = "thumbnails";
+var policyImageManager = "thumbnails2";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
