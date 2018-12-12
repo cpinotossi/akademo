@@ -12,7 +12,7 @@ module.exports = (passport) => {
   passport.use(new GoogleStrategy({
       clientID: '1052562236333-agfmaqsb5bg5310n9n4l2cnt0ksefg8d.apps.googleusercontent.com',
       clientSecret: process.env['googleClientSecret'],
-      callbackURL: 'http://localhost:3000/auth/google/callback'
+      callbackURL: 'http://service.hebe.io/auth/google/callback'
     },
     (token, refreshToken, profile, done) => {
       // passes the profile and token data to serializeUser
