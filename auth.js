@@ -1,3 +1,4 @@
+require('dotenv').config();
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 module.exports = (passport) => {
   // Used to stuff a piece of information into a cookie
@@ -10,7 +11,7 @@ module.exports = (passport) => {
   });
   passport.use(new GoogleStrategy({
       clientID: '1052562236333-agfmaqsb5bg5310n9n4l2cnt0ksefg8d.apps.googleusercontent.com',
-      clientSecret: 'rKy6n8H_3ganXNkOSysBlq5_',
+      clientSecret: process.env['googleClientSecret'],
       callbackURL: 'http://localhost:3000/auth/google/callback'
     },
     (token, refreshToken, profile, done) => {
