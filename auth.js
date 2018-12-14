@@ -10,9 +10,9 @@ module.exports = (passport) => {
     done(null, user);
   });
   passport.use(new GoogleStrategy({
-      clientID: '1052562236333-agfmaqsb5bg5310n9n4l2cnt0ksefg8d.apps.googleusercontent.com',
+      clientID: '605516950786-jskddglrkuqk618bl69b7nu9nkqj5h8d.apps.googleusercontent.com',
       clientSecret: process.env['googleClientSecret'],
-      callbackURL: 'https://service.hebe.io/auth/google/callback'
+      callbackURL: 'http://www.edgegate.de/auth/google/callback'
     },
     (token, refreshToken, profile, done) => {
       // passes the profile and token data to serializeUser
